@@ -1,9 +1,11 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.util.Arrays;
 
 public class myGUI {
+
     private JButton OKButton;
     private JButton closeButton;
     private JLabel labelName;
@@ -21,6 +23,12 @@ public class myGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 check(textField1,passwordField1);
+            }
+        });
+        closeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Panel1.setVisible(false); //you can't see me!
             }
         });
     }
